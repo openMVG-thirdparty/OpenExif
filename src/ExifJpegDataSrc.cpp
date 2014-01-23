@@ -46,6 +46,9 @@
 #include "ExifJpegExtn.h"
 #include "OpenExif_jerror.h"
 #include "string.h"
+#if !defined WIN32 || !defined _WINDOWS
+#include <unistd.h>
+#endif
 
 #define INPUT_BUF_SIZE  60000   /* choose a much larger in memory buffer for NIFTY*/
 

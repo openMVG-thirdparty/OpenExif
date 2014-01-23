@@ -39,6 +39,9 @@
 #include "ExifImageFile.h"
 #include "ExifRawAppSeg.h"
 #include "ExifImageFileIO.h"
+#if !defined WIN32 || !defined _WINDOWS
+#include <unistd.h>
+#endif
 
 
 ExifStatus ExifImageFile::writeImage( void )
